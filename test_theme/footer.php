@@ -27,7 +27,7 @@
       <div class="block_contact_form">
         <p class="title_contact_form">Skontaktuj się z nami</p>
         <div class="contact_form"  id="contactForm">
-        <?php echo do_shortcode('[contact-form-7 id="11" title="Form for contact"]'); ?>
+        <?php echo do_shortcode('[contact-form-7 id="7" title="Form for contact"]'); ?>
         </div>
       </div>
 

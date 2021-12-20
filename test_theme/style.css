@@ -67,6 +67,7 @@ a:not([class]) {
 
 img {
   max-width: 100%;
+  max-height: 100%;
   display: block;
 }
 
@@ -96,6 +97,8 @@ header {
 
 .logo {
   margin-top: 12px;
+  width: 70px;
+  ;
 }
 
 .header-container, .head_nav>ul {
@@ -127,6 +130,7 @@ header {
 
 .call {
   margin-left: auto;
+  width: 100px;
 }
 
 .btn_call {
@@ -258,6 +262,15 @@ p.p_diff {
 .wrap_img_project {
   width: 485px;
   height: 275px;
+  overflow: hidden;
+}
+
+.wrap_img_project>a {
+  /* display:block; */
+}
+
+.wrap_img_project>a>img {
+  margin: 0 auto;
 }
 
 .title_project {
@@ -267,6 +280,44 @@ p.p_diff {
   font-size: 24px;
   letter-spacing: 0.2em;
   margin: 15px 0;
+}
+
+/* -------------- page gallery  ------------ */
+.wp-block-post-featured-image {
+  display: none;
+}
+
+.page_gallery {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.page_gallery h2 {
+  text-align: center;
+  margin-top: 170px;
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.page_gallery p {
+  margin-top: 40px;
+  font-family: PT Sans;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px
+}
+
+.page_gallery figure {
+  margin: 0 auto 50px;
+}
+
+.page_gallery figure>img {
+  margin: 0 auto;
+}
+
+.modula.modula-gallery {
+  margin-top: 100px;
 }
 
 /* -------------- FOOTER ------------ */
@@ -306,6 +357,21 @@ footer {
   line-height: 28px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.contact_form {
+  border: none;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  border: none;
+  outline: none;
+  /* text-shadow: 0 0 0 #fff; */
+}
+
+select {
+  background: transparent;
 }
 
 .title_contact_form {
@@ -429,6 +495,7 @@ textarea:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 174, 255, 0.04) 50%, rgba(255, 255, 255, 0) 51%, rgba(0, 174, 255, 0.03) 100%);
 }
+
 .contact_form option,
 .chosen-select,
 .chosen-select option {
@@ -510,4 +577,200 @@ textarea:-webkit-autofill:focus {
 
 .modal_open {
   display: block;
+}
+
+
+/* ---------------------------------------------------------------- */
+/* Add a black background color to the top navigation */
+.topnav {
+  /* background-color: #333; */
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  /* float: left; */
+  /* display: block; */
+  /* color: #f2f2f2; */
+  /* text-align: center; */
+  /* padding: 14px 16px; */
+  /* text-decoration: none; */
+  /* font-size: 17px; */
+}
+
+/* Change the color of links on hover */
+/* .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+} */
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+
+/* --------------------- media queries -------------- */
+
+@media (max-width: 1500px) {
+  .head_nav {
+    padding-left: 5px;
+  }
+
+  .main_head {
+    margin-bottom: 50px;
+  }
+
+  .main_projects .project:first-child {
+    margin-left: 0;
+  }
+
+  .head_nav ul>li {
+    margin-left: 10px;
+  }
+
+
+  main {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .footer_contact {
+    flex-direction: column;
+  }
+
+  .contacts, .title_contact_form, .contact_form, .block_contact_form {
+    margin: 0 auto;
+  }
+
+  .page_gallery {
+    width: 800px;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1200px) {
+  .logo {
+    margin-top: 12px;
+    width: 70px;
+  }
+
+  .topnav li:first-child {
+    margin-bottom: -10px;
+  }
+
+  .topnav li:not(:first-child) {
+    display: none;
+    background: #2F2F2F;
+    padding: 3px 10px;
+
+  }
+
+  .call {
+    margin-left: 30px;
+    margin-top: -9px;
+  }
+
+  .head_nav {
+    order: 3;
+    justify-content: end;
+    margin-left: auto;
+    margin-top: -9px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .topnav a.icon {
+
+    display: block;
+    font-size: 50px;
+  }
+
+  .topnav {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .topnav.responsive {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+
+  .topnav.responsive li {
+    width: 100%;
+    display: block;
+    text-align: end;
+  }
+
+  .popup_call {
+    padding: 7px 10px;
+    left: 100%;
+    right: auto;
+  }
+  .popup_call:before{
+    border-left: 10px solid transparent;
+    border-right: 10px solid #FFF;
+    right: 100%;
+    left: auto;
+  }
+  .btn_call:hover+.popup_call{
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+
+
+  .header-container {
+    /* flex-direction: column; */
+  }
+
+  /* .logo{
+    margin-bottom: -151px;
+    margin-top: 80px;
+  } */
+}
+
+@media (max-width: 768px) {
+  .call, .logo {
+    width: 50px;
+  }
+
+  .btn_call {
+    padding: 9px;
+  }
+
+  .call {
+    margin-top: 3px;
+  }
+
+  main {
+    margin-top: 100px;
+  }
+
+  .main_head {
+    text-align: center;
+  }
+
+  .wrap_img_project {
+    width: 260px;
+    overflow: hidden;
+  }
+
+  .main_block_text, .title_main_text {
+    font-size: 18px;
+  }
+
+
+
 }

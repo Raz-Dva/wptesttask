@@ -1,8 +1,12 @@
-/* 
-Theme name : Test theme
-Author: Ivan Honcharov
-URL: https://portfolio-honcharov.herokuapp.com/
- */
+/*
+Theme Name: Task Test
+Theme URI: 
+Author: Honcharov Ivan
+Author URI: https://portfolio-honcharov.herokuapp.com/
+Description: test theme
+Version: 1
+Text Domain: testtheme
+*/
 
 
 @import url(https://fonts.googleapis.com/css?family=Poppins:regular,300,400,600);
@@ -308,7 +312,7 @@ p.p_diff {
   margin: 0 auto;
 }
 .modula.modula-gallery{
-
+margin-top: 100px;
 }
 
 /* -------------- FOOTER ------------ */
@@ -611,9 +615,6 @@ textarea:-webkit-autofill:focus {
 
 @media (max-width: 992px) {
 
-  main {
-    /* width: 480px; */
-  }
 
   .header-container {
     flex-direction: column;
